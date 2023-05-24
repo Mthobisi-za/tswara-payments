@@ -1,0 +1,305 @@
+<input type="hidden" name="" value={{id}} class="doc-id-">
+<div class="loader">
+    <div class='wrapper'>
+  <button>Loading ...
+    <svg>
+      <rect x="1" y="1"></rect>
+    </svg>
+  </button>
+</div>
+</div>
+<style class="style_remove">
+    @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #333333;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+button > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+button > svg > rect {
+  fill: none;
+  stroke: #333333;
+  stroke-width: 2px;
+  stroke-dasharray: 240 160 240 160;
+  stroke-dashoffset: 0;
+  animation: pathRect 2s linear infinite;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+}
+
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 100;
+  }
+
+  50% {
+    stroke-dashoffset: 200;
+  }
+
+  75% {
+    stroke-dashoffset: 300;
+  }
+
+  100% {
+    stroke-dashoffset: 400;
+  }
+}
+
+</style>
+
+
+<div class="form all" style="display: none;">
+<div class="uploader">
+        <div class="Neon Neon-theme-dragdropbox">
+        <input style="z-index: 999; opacity: 0; width: 320px; height: 200px; position: absolute; right: 0px; left: 0px; margin-right: auto; margin-left: auto;" name="files[]" id="filer_input2" multiple="multiple" type="file">
+        <div class="Neon-input-dragDrop"><div class="Neon-input-inner"><div class="Neon-input-icon"><i class="fa fa-file-image-o"></i></div><div class="Neon-input-text"><h3>Drag&amp;Drop files here</h3> <span style="display:inline-block; margin: 15px 0">or</span></div><a class="Neon-input-choose-btn blue">Browse Files</a></div></div>
+        </div>
+</div>
+<div class="status">
+    <p style="padding-left: 10px;color: #251B37;font-weight:bold;font-family:sans-serif;" class="text">Status : <span class="status_text"></span></p>
+</div>
+<div class="bt-pay" style="text-align: right;width:90%;margin:auto;paddig-bottom:20px;">
+    <div id="paypal-button-container-P-6B193814M87688734MRWOLCQ"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=ASaPfG3wad16xy11CjpyJDLtBKH5FYImtnomPjf245oU9y1CQj5BDAOpcUNHPFNUP70g4oOdNGvfAlse&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<br>
+</div>
+<div class="div">
+    <p class="text" style="color: #251B37;text-align:center">Update Profile details</p>
+</div>
+<div class="details" style="width: 90%;margin:auto;">
+    <p style="font-size: 20px;font-family:sans-serif;">Username : <input class="username" type="text" name="" id="" value="" style="border-radius:30px;outline:none;border:#251B37 2px solid;text-align:center;padding:15px;width:60%;"></p>
+    <p style="font-size: 20px;font-family:sans-serif;">Email : <input class="email" type="text" name="" id="" style="border-radius:30px;outline:none;border:#251B37 2px solid;text-align:center;padding:15px;width:60%;"></p>
+    <p style="font-size: 20px;font-family:sans-serif;">Password : <input class="password" type="text" name="" id="" style="border-radius:30px;outline:none;border:#251B37 2px solid;text-align:center;padding:15px;width:60%;"></p>
+    <p style="font-size: 20px;font-family:sans-serif;">Address : <input class="address" type="text" name="" id="" style="border-radius:30px;outline:none;border:#251B37 2px solid;text-align:center;padding:15px;width:60%;"></p>
+    <p style="font-size: 20px;font-family:sans-serif;">Phone Number : <input class="p_number" type="text" name="" id="" style="border-radius:30px;outline:none;border:#251B37 2px solid;text-align:center;padding:15px;width:60%;"></p>
+    <p style="font-size: 20px;font-family:sans-serif;">Suburban : <input class="suburban" type="text" name="" id="" style="border-radius:30px;outline:none;border:#251B37 2px solid;text-align:center;padding:15px;width:60%;"></p>
+</div>
+
+<br> <br> <br>
+<div class="btns" style="text-align: center;paddig:20px">
+     <button style="background-color: #251B37;border:none;outline:none;color:white;font-size:20px;font-weight:bold;border-radius:30px;padding:10px" class="sub">Update Bio</button>
+</div>
+<br> <br>
+
+</div>
+
+
+<style>
+.uploader{
+        padding: 10px;
+}
+.Neon {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #494949;
+    position: relative;
+}
+.Neon * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.Neon-input-dragDrop {
+    display: block;
+    width: 343px;
+    margin: 0 auto 25px auto;
+    padding: 25px;
+    color: #8d9499;
+    color: #97A1A8;
+    background: #fff;
+    border: 2px dashed #C8CBCE;
+    text-align: center;
+    -webkit-transition: box-shadow 0.3s, border-color 0.3s;
+    -moz-transition: box-shadow 0.3s, border-color 0.3s;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    border-radius: 30px;
+    max-width: 100%;
+}
+.Neon-input-dragDrop .Neon-input-icon {
+    font-size: 48px;
+    margin-top: -10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.Neon-input-text h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.Neon-input-text span {
+    font-size: 12px;
+}
+.Neon-input-choose-btn.blue {
+    color: #008BFF;
+    border: 1px solid #008BFF;
+}
+.Neon-input-choose-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8d9496;
+    border-radius: 3px;
+    border: 1px solid #c6c6c6;
+    vertical-align: middle;
+    background-color: #fff;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.05);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+</style>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCqpzJPGFQEC4VryuIdkKYrOvhxWkXErwA",
+    authDomain: "love-matcher-67908.firebaseapp.com",
+    projectId: "love-matcher-67908",
+    storageBucket: "love-matcher-67908.appspot.com",
+    messagingSenderId: "673306542856",
+    appId: "1:673306542856:web:211f646994a84e635162bd"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+
+function addData(prop, val){
+document.querySelector('.'+prop).value = val;
+}
+
+var doc_id_id = document.querySelector('.doc-id-').value;
+
+if(doc_id_id){
+    db.collection("users").where("userId", "==", 'QWWCe7U8BLPk7oEuLHqysrAfaRg2')
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            addData('username', (doc.data()).Username);
+            addData('email', (doc.data()).UserEmail);
+            addData('password', (doc.data()).UserPassword);
+            addData('address', (doc.data()).UserAddress);
+            addData('p_number', (doc.data()).userTel);
+            addData('suburban', (doc.data()).suburb);
+            
+            localStorage.setItem('doc_id', doc.id);
+            localStorage.setItem('data', JSON.stringify(doc.data()));
+            localStorage.setItem('status', doc.data().status);
+
+            document.querySelector('.status_text').innerHTML = doc.data().status
+        });
+    })
+    .then(() =>{
+        document.querySelector('.all').style.display = 'block';
+        document.querySelector('.loader').style.display =  'none';
+        document.querySelector('.style_remove').remove();
+    var t =(localStorage.getItem('status')) == 'success'; 
+        if(t){
+            
+            document.querySelector('.bt-pay').style.display =  'none';
+        }})
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+}
+  function update(obj){
+    var id_doc = localStorage.getItem('doc_id')
+    var cityRef = db.collection('users').doc(id_doc);
+    cityRef.set(obj, { merge: true });
+}
+function compare(){
+        var username =JSON.parse(localStorage.getItem('data')).Username;
+        var email =JSON.parse(localStorage.getItem('data')).UserEmail;
+        var address =JSON.parse(localStorage.getItem('data')).UserAddress;
+        var phone_n =JSON.parse(localStorage.getItem('data')).userTel;
+        var suburb =JSON.parse(localStorage.getItem('data')).suburb;
+        var password =JSON.parse(localStorage.getItem('data')).UserPassword;
+
+
+        var formusername = document.querySelector('.username').value;
+        var formemail = document.querySelector('.email').value;
+        var formaddress = document.querySelector('.address').value;
+        var formphone_n = document.querySelector('.p_number').value;
+        var formsuburban = document.querySelector('.suburban').value;
+        var formpassword = document.querySelector('.password').value;
+        var obj1 = {Username:username,UserEmail:email,UserAddress:address,userTel:phone_n,suburb,UserPassword:password};
+        var obj2 = {Username: formusername,UserEmail: formemail,UserAddress:formaddress,userTel: formphone_n,suburb: formsuburban,UserPassword: formpassword};
+
+
+
+
+        if(JSON.stringify(obj1) !== JSON.stringify(obj2)){
+            console.log(true);
+             update(obj2);
+        }
+    }
+
+    document.querySelector('.sub').addEventListener('click', ()=>{
+        compare();
+    });
+
+
+paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-6B193814M87688734MRWOLCQ'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+        actions.redirect(`https://client.tswaraekacsecurity.co.za/done/${doc_id_id}`);
+      }
+  }).render('#paypal-button-container-P-6B193814M87688734MRWOLCQ'); // Renders the PayPal button
+
+</script>
+

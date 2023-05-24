@@ -1,0 +1,23 @@
+{
+    "dependencies": {
+        "@netlify/functions": "^1.6.0",
+        "@types/express": "^4.17.17",
+        "express": "^4.18.2",
+        "express-handlebars": "^7.0.7",
+        "install": "^0.13.0",
+        "netlify-lambda": "^2.0.16",
+        "npm": "^9.6.7",
+        "serverless-http": "^3.2.0"
+    },
+    "name": "tswara-payments",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "netlify deploy --prod"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}

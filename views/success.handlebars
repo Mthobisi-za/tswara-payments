@@ -1,0 +1,232 @@
+<input type="hidden" value={{id}} class="doc_id">
+<div class="content" style="display: none;">
+  <div class="box"> 
+  <div class="success alert">
+    <div class="alert-body">
+      Success ! <br>
+      You can now open the application!
+    </div>
+  </div>
+</div>
+</div>
+
+<style>
+.uploader{
+        padding: 10px;
+}
+.Neon {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #494949;
+    position: relative;
+}
+.Neon * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.Neon-input-dragDrop {
+    display: block;
+    width: 343px;
+    margin: 0 auto 25px auto;
+    padding: 25px;
+    color: #8d9499;
+    color: #97A1A8;
+    background: #fff;
+    border: 2px dashed #C8CBCE;
+    text-align: center;
+    -webkit-transition: box-shadow 0.3s, border-color 0.3s;
+    -moz-transition: box-shadow 0.3s, border-color 0.3s;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    border-radius: 30px;
+    max-width: 100%;
+}
+.Neon-input-dragDrop .Neon-input-icon {
+    font-size: 48px;
+    margin-top: -10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.Neon-input-text h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.Neon-input-text span {
+    font-size: 12px;
+}
+.Neon-input-choose-btn.blue {
+    color: #008BFF;
+    border: 1px solid #008BFF;
+}
+.Neon-input-choose-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8d9496;
+    border-radius: 3px;
+    border: 1px solid #c6c6c6;
+    vertical-align: middle;
+    background-color: #fff;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.05);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+</style>
+<div class="loader">
+    <div class='wrapper'>
+  <button>Loading ...
+    <svg>
+      <rect x="1" y="1"></rect>
+    </svg>
+  </button>
+</div>
+</div>
+<style>
+.box{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  height: 90vh;
+  align-items: center;
+}
+
+.alert{
+  margin-top:25px;
+  background-color:#fff;
+  font-size:25px;
+  font-family:sans-serif;
+  text-align:center;
+  width:300px;
+  height:100px;
+  padding-top: 150px;
+  position:relative;
+  border: 1px solid #efefda;
+  border-radius: 2%;
+  box-shadow:0px 0px 3px 1px #ccc;
+}
+
+.alert::before{
+  width:100px;
+  height:100px;
+  position:absolute;
+  border-radius: 100%;
+  inset: 20px 0px 0px 100px;
+  font-size: 60px;
+  line-height: 100px;
+  border : 5px solid gray;
+  animation-name: reveal;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.alert>.alert-body{
+  opacity:0;
+  animation-name: reveal-message;
+  animation-duration:1s;
+  animation-timing-function: ease-out;
+  animation-delay:1.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes reveal-message{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+.success{
+  color:green;
+}
+
+.success::before{
+  content: '✓';
+  background-color: #eff;
+  box-shadow: 0px 0px 12px 7px rgba(200,255,150,0.8) inset;
+  border : 5px solid green;
+}
+
+.error{
+  color: red;
+}
+
+.error::before{
+  content: '✗';
+  background-color: #fef;
+  box-shadow: 0px 0px 12px 7px rgba(255,200,150,0.8) inset;
+  border : 5px solid red;
+}
+
+@keyframes reveal {
+  0%{
+    border: 5px solid transparent;
+    color: transparent;
+    box-shadow: 0px 0px 12px 7px rgba(255,250,250,0.8) inset;
+    transform: rotate(1000deg);
+  }
+  25% {
+    border-top:5px solid gray;
+    color: transparent;
+    box-shadow: 0px 0px 17px 10px rgba(255,250,250,0.8) inset;
+    }
+  50%{
+    border-right: 5px solid gray;
+    border-left : 5px solid gray;
+    color:transparent;
+    box-shadow: 0px 0px 17px 10px rgba(200,200,200,0.8) inset;
+  }
+  75% {
+    border-bottom: 5px solid gray;
+    color:gray;
+    box-shadow: 0px 0px 12px 7px rgba(200,200,200,0.8) inset;
+    }
+  100%{
+    border: 5px solid gray;
+    box-shadow: 0px 0px 12px 7px rgba(200,200,200,0.8) inset;
+  }
+}
+
+</style>
+
+<script type="module">
+ // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCqpzJPGFQEC4VryuIdkKYrOvhxWkXErwA",
+    authDomain: "love-matcher-67908.firebaseapp.com",
+    projectId: "love-matcher-67908",
+    storageBucket: "love-matcher-67908.appspot.com",
+    messagingSenderId: "673306542856",
+    appId: "1:673306542856:web:211f646994a84e635162bd"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+var id_doc = document.querySelector('.doc_id').value;
+  //var id_doc = localStorage.getItem('doc_id');
+  
+    new Promise((resolve, reject) => {
+      var cityRef = db.collection('users').doc(id_doc);
+      cityRef.set({status:'success', paymet: 'success'}, { merge: true }); document.querySelector('.content').style.display = 'block';
+      document.querySelector('.loader').style.display = 'none';
+      console.log('done');
+    });
+</script>
+
