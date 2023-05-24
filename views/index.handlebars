@@ -212,7 +212,7 @@ document.querySelector('.'+prop).value = val;
 var doc_id_id = document.querySelector('.doc-id-').value;
 
 if(doc_id_id){
-    db.collection("users").where("userId", "==", 'QWWCe7U8BLPk7oEuLHqysrAfaRg2')
+    db.collection("users").where("userId", "==", doc_id_id)
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -297,7 +297,7 @@ paypal.Buttons({
       },
       onApprove: function(data, actions) {
         alert(data.subscriptionID); // You can add optional success message for the subscriber here
-        actions.redirect(`https://client.tswaraekacsecurity.co.za/done/${doc_id_id}`);
+        actions.redirect(`https://blue-green-spider-gear.cyclic.app//done/${doc_id_id}`);
       }
   }).render('#paypal-button-container-P-6B193814M87688734MRWOLCQ'); // Renders the PayPal button
 
