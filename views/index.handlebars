@@ -212,7 +212,7 @@ document.querySelector('.'+prop).value = val;
 var doc_id_id = document.querySelector('.doc-id-').value;
 
 if(doc_id_id){
-    db.collection("users").where("userId", "==", doc_id_id)
+    db.collection("users").where(firebase.firestore.FieldPath.documentId(), "==", doc_id_id)
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
